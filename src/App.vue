@@ -1,37 +1,35 @@
 <template>
-  <div class="row">
-    <div class="">
-        <h1>Hola mundo!!</h1>
-       <HelloWorld></HelloWorld>
+  <div class="container-fluid">
+    <div class="row">
+      <h1 class="text-end"> México en llamas</h1>
+      <IndexScreen></IndexScreen>
     </div>
   </div>
+  
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import IndexScreen from './components/Index.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    IndexScreen
   }
 }
 </script>
 
 <style>
-
-body{
-    background-color: #E36414 ;
-}
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  background-color: #E36414 ;
-}
-
+  @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+  #app{
+    background-color: #e36414;
+    height: 100vh;
+  }
+  h1{
+    font-family: 'Michroma', sans-serif;
+    font-size: 9rem !important;
+  }
 </style>

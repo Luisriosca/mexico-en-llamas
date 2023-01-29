@@ -2,13 +2,13 @@
     <div class="container-fluid bg-custom">
         <div class="row">
 
-            <div class="col-12 col-s-12 text-end title">
+            <div class="col-12 col-s-12 text-end title ps-2">
                 MEXICO EN LLAMAS
             </div>
 
             <MovingBar/>
 
-            <div class="box col-6 element-h400px">
+            <div class="box col-12 col-lg-6 element-h400px">
                 <WindowStyleSection 
                     :title="'Siguen al alza incendios forestales en México; se registran 97 en 20 estados'.toUpperCase()"
                     :content="'Los incendios forestales activos en la República Mexicana pasaron de 89 a 97 en las últimas 24 horas, en 20 estados de la República Mexicana, incluidas 15 áreas naturales protegidas.'"
@@ -16,13 +16,13 @@
                 />
             </div>
 
-            <div class="box box-grid col-6 element-h400px">
+            <div class="box box-grid col-12 col-lg-6 p-4 overflow-hidden">
                 <p>Contenido principal columna 2</p>
             </div>
-            <div class="box box-grid col-7 ">
+            <div class="box box-grid col-12 col-lg-7 p-5 overflow-hidden">
                 <p>Contenido principal columna 3</p>
             </div>
-            <div class="box col-5 element-h300px">
+            <div class="box col-12 col-lg-5 element-h300px">
                 <WindowStyleSection :title="'Hello World'" />
             </div>
         </div>
@@ -46,6 +46,10 @@
         data: function () {
         }
     }
+
+    // TODO: Refactorizar para que se vea chido el contenido en cada una de las "ventanas" de Contenido principal
+    // TODO: Trabajar en el responsive
+
 </script>
 
 <style>
@@ -84,7 +88,8 @@
         transition: linear .2s;
     }
 
-    .element-h300px {
+
+   /*  .element-h300px {
         height: 300px;
     }
 
@@ -94,7 +99,7 @@
 
     .element-h500px {
         height: 500px;
-    }
+    } */
 
     .accordion-button {
         position: relative;
@@ -111,4 +116,12 @@
         overflow-anchor: none;
         transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, border-radius .15s ease;
     }
+
+    @media (max-width: 576px) { 
+        .title{
+            font-family: 'Michroma', sans-serif;
+            font-size: 2.5rem; 
+        }
+    }
+    
 </style>

@@ -5,15 +5,23 @@
             <fa class="transition" :icon="myIcon2" @mouseover="myIcon2 = 'fire'" @mouseout="myIcon2 = 'circle' "/>
             <fa class="transition" :icon="myIcon3" @mouseover="myIcon3 = 'fire'" @mouseout="myIcon3 = 'circle' "/>
         </div>
-        <div class="col-10 text-end">
+        <div class="col-10 text-end text-header">
             {{title}}
         </div>
     </div>
-    <div class="row content">
-        <div class="col-5 d-flex align-items-center justify-content-center">
-            <p class="text-center">{{content}}</p>
+    <div class="row content overflow-hidden">
+        <div class="col-12 col-md-12 col-lg-5 d-lg-flex align-items-center justify-content-center p-4">
+            <p>{{content}}</p>
         </div>
-        <div id="duotone" class="col-7 post-img" :style="{ 'background-image': 'url('+img+')' }">
+        <div id="duotone" class="d-none d-lg-block col-lg-7 post-img" :style="{ 'background-image': 'url('+img+')' }">
+        </div>
+    </div>
+
+    <div class="d-flex">
+        <div class="col-12 col-md-12 col-lg-5 d-lg-flex align-items-center justify-content-center">
+            <p class="">{{content}}</p>
+        </div>
+        <div id="duotone" class="col-lg-7 d-none d-md-block post-img" :style="{ 'background-image': 'url('+img+')' }">
         </div>
     </div>
 </template>
@@ -86,4 +94,23 @@ export default {
     transform: scale(1.3);
     transition: ease-in .2s;
 }
+
+@media (max-width: 600px) {
+    #duotone{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .text-header{
+        font-size: 12px;
+    }
+    
+    .transition{
+        font-size: 13px;
+    }
+    .icons{
+        padding-inline-start: 2rem;
+    }
+}
+
 </style>

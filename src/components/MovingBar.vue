@@ -17,7 +17,7 @@
     @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,600&display=swap');
     .marquee {
         height: 40px;
-        /* overflow: hidden; */
+        overflow: hidden;
         position: relative;
         background-color: #2a2a2a;
         display: flex;
